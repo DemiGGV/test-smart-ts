@@ -1,10 +1,22 @@
 import styled from '@emotion/styled';
-import example from './assets/example.png';
 
-export const AppWrapper = styled.div`
+export const MainSection = styled.div`
+  padding: 50px 20px;
+  margin: 0 auto;
+
   width: 100%;
   height: 100vh;
-  background-image: url(${example});
-  background-repeat: no-repeat;
-  background-position: center bottom;
+
+  @media screen and (min-width: 420px) {
+    max-width: 420px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding: 50px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 1440px;
+    padding: 50px 100px;
+  }
 `;
