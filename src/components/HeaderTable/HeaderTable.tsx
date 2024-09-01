@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppDispatch, useAppSelector } from '../../Redux/redux-hooks';
 import {
   getEmailFilter,
   getNameFilter,
@@ -14,17 +14,16 @@ import {
 } from './HeaderTable.styled';
 
 export const HeaderTable = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
-  const name = useSelector(getNameFilter);
-  const username = useSelector(getUsernameFilter);
-  const email = useSelector(getEmailFilter);
-  const phone = useSelector(getPhoneFilter);
+  const name = useAppSelector(getNameFilter);
+  const username = useAppSelector(getUsernameFilter);
+  const email = useAppSelector(getEmailFilter);
+  const phone = useAppSelector(getPhoneFilter);
 
-  const handleChange = (e) => {
+  const handleChange = ( e:React.ChangeEvent<HTMLInputElement> ) => {
     e.preventDefault;
     const { name, value } = e.target;
-    console.log(name, value);
     dispatch(setFilter({ [name]: value }));
   };
 

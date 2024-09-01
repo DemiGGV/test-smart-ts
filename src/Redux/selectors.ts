@@ -1,18 +1,19 @@
 import { createSelector } from "@reduxjs/toolkit";
+import { RootState } from "./store";
 
-export const getUsers = (state) => state.users.data;
+export const getUsers = (state: RootState) => state.users.data;
 
-export const getIsLoading = (state) => state.users.isLoading;
+export const getIsLoading = (state: RootState) => state.users.isLoading;
 
-export const getCurrentID = (state) => state.users.currentID;
+export const getCurrentID = (state: RootState) => state.users.currentID;
 
-export const getError = (state) => state.users.error;
+export const getError = (state: RootState) => state.users.error;
 
 // Filters
-export const getNameFilter = (state) => state.filters.name;
-export const getUsernameFilter = (state) => state.filters.username;
-export const getEmailFilter = (state) => state.filters.email;
-export const getPhoneFilter = (state) => state.filters.phone;
+export const getNameFilter = (state: RootState) => state.filters.name;
+export const getUsernameFilter = (state: RootState) => state.filters.username;
+export const getEmailFilter = (state: RootState) => state.filters.email;
+export const getPhoneFilter = (state: RootState) => state.filters.phone;
 
 export const getFilteredUsers = createSelector(
   [getUsers, getNameFilter, getUsernameFilter, getEmailFilter, getPhoneFilter],

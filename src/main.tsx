@@ -9,6 +9,7 @@ import App from "./App";
 
 const rootEntry = document.getElementById("root");
 
+// root HTML element guard
 if (rootEntry) {
   createRoot(rootEntry).render(
     <StrictMode>

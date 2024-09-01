@@ -1,6 +1,13 @@
 import { TextField, UserItem } from './User.styled';
 
-export const User = ({ name, username, email, phone }) => {
+interface IUserProps {
+  name: string,
+  username: string,
+  email: string,
+  phone: string
+}
+
+export const User = ({ name, username, email, phone }: IUserProps) => {
   return (
     <UserItem>
       <TextField>{name}</TextField>

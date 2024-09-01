@@ -1,8 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchUsers } from "./usersOperations.js";
 
+import { TUser } from '../../types/TUser.js'
+
 const usersInitialState = {
-  data: [],
+  data: [] as TUser[],
   isLoading: false,
   currentID: null,
   error: null,
@@ -22,9 +24,8 @@ const usersSlice = createSlice({
         state.error = null;
         state.data = action.payload;
       })
-      .addCase(fetchUsers.rejected, (state, action) => {
+      .addCase(fetchUsers.rejected, (state) => {
         state.isLoading = false;
-        state.error = action.payload;
       });
   },
 });
