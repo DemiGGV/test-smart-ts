@@ -11,9 +11,10 @@ export const UserItem = styled.div`
 `;
 
 export const TextField = styled.p`
+  position: relative;
   text-align: left;
   padding: 10px;
-  display: inline-block;
+  display: block;
 
   overflow: hidden;
   white-space: nowrap;
@@ -21,10 +22,32 @@ export const TextField = styled.p`
 
   cursor: default;
 
-  &:hover {
-    overflow: visible;
-    transition: all 0.3s ease;
+  &::after {
+    content: '';
+    top: 5px;
+    left: 0;
+    scale: 0.9;
+  }
+
+  &:hover::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 5px;
+    left: 0;
+    z-index: 10;
+    padding: 5px;
+    width: max-content;
+
+    white-space: nowrap;
     background-color: #fff;
     border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    scale: 1;
+    transition: all 0.2s ease;
+  }
+
+  &:hover {
+    overflow: visible;
   }
 `;

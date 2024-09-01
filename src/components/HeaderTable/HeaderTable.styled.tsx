@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
 
 export const HeaderMenuWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 10px 5px;
+  display: flex;
   background-color: #f0f0f0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const LabelStyled = styled.label`
@@ -13,7 +14,7 @@ export const LabelStyled = styled.label`
 
 export const InputStyled = styled.input`
   width: 100%;
-  text-align: left;
+  max-width: 100%;
   padding: 10px;
   display: inline-block;
 
@@ -22,19 +23,23 @@ export const InputStyled = styled.input`
   border-radius: 4px;
   outline: none;
 
+  text-align: left;
+  font-family: inherit;
+  font-size: inherit;
+
   &:focus {
     background-color: #e4e4e4;
   }
 
   &:focus ~ span {
-    top: -12px;
+    top: -15px;
     left: 5px;
 
     font-size: 10px;
   }
 
   &:not(:placeholder-shown) ~ span {
-    top: -12px;
+    top: -15px;
     left: 5px;
 
     font-size: 10px;
@@ -43,12 +48,11 @@ export const InputStyled = styled.input`
 
 export const PlaceHolderStyled = styled.span`
   position: absolute;
-  top: 8px;
+  top: 5px;
   left: 10px;
 
   cursor: text;
 
   color: #999;
-
   transition: all 0.3s ease;
 `;

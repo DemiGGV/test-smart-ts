@@ -8,16 +8,11 @@ export const GlobalCSS = css`
   body {
     background-color: var(--main-bg-color);
 
-    font-family: 'Manrope', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.6;
     color: var(--gray-color);
-
-    @media screen and (min-width: 768px) {
-      font-size: 18px;
-      line-height: 1.5;
-    }
+    
   }
 
   h1,
@@ -35,6 +30,7 @@ export const GlobalCSS = css`
     margin: 0;
     padding: 0;
     list-style: none;
+
   }
 
   img {

@@ -1,9 +1,9 @@
-import { useEffect } from "react";
-import { HeaderTable } from "./components/HeaderTable/HeaderTable";
-import { UsersList } from "./components/UserList/UsersList";
-import { fetchUsers } from "./Redux/users/usersOperations.js";
-import { MainSection } from './App.styled.jsx';
-import { useAppDispatch } from "./Redux/redux-hooks";
+import { useEffect } from 'react';
+import { HeaderTable } from './components/HeaderTable/HeaderTable';
+import { UsersList } from './components/UserList/UsersList';
+import { fetchUsers } from './Redux/users/usersOperations.js';
+import { MainSection, TitleStyled } from './App.styled.jsx';
+import { useAppDispatch } from './Redux/redux-hooks';
 
 function App() {
   const dispatch = useAppDispatch();
@@ -14,6 +14,7 @@ function App() {
 
   return (
     <MainSection>
+      <TitleStyled>Filters:</TitleStyled>
       <HeaderTable />
       <UsersList />
     </MainSection>

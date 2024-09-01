@@ -20,3 +20,10 @@ export const MainSection = styled.div`
     padding: 50px 100px;
   }
 `;
+
+export const TitleStyled = styled.h2`
+  text-align: left;
+  color: #999;
+  font-weight: 400;
+  margin-bottom: 20px;
+`;
