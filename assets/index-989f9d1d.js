@@ -117,6 +117,7 @@ Error generating stack: `+i.message+`
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #999;
 `,xo=rt.label`
   position: relative;
 `,Co=rt.input`
