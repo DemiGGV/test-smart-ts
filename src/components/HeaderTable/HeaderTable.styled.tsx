@@ -6,6 +6,7 @@ export const HeaderMenuWrapper = styled.div`
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #999;
 `;
 
 export const LabelStyled = styled.label`
