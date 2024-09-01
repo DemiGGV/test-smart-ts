@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 
 export const HeaderMenuWrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   background-color: #f0f0f0;
   width: 100%;
-  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #999;
 `;

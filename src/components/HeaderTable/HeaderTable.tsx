@@ -24,7 +24,7 @@ export const HeaderTable = () => {
   const handleChange = ( e:React.ChangeEvent<HTMLInputElement> ) => {
     e.preventDefault;
     const { name, value } = e.target;
-    dispatch(setFilter({ [name]: value }));
+    dispatch(setFilter({ [name]: value.trim() }));
   };
 
   return (

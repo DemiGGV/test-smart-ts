@@ -1,35 +1,3 @@
-** Junior Front-End Developer**
-Київ, віддалено
-
-SMART business is currently looking for Junior Front-End Developer.
-
-SMART business invites students (3-6 year of study) and graduates of technical specialties, with at least intermediate English level and able to think logically to join our friendly team, where hard work, commitment, and willingness to learn are highly valued. You can join the SMART team by passing paid internship for Junior Front-End Developer.
-
-You can join the SMART team by completing a test task.
-
-Students pass the course of lectures and practices about development with JavaScript and React and afterward, are asked to solve several issues and to implement a project.
-
-Our ideal candidate has the following:
-
--    Experience with JavaScript in a single page web app environment.
--    Proficiency with HTML/CSS/JavaScript.
--    Experience with TypeScript.
--    Experience writing ES6/7.
--    Strong knowledge of React + Redux.
--    Experience with RESTful JSON APIs, Web Sockets.
--    Solid experience with cross-device responsive web development techniques.
--    Experience with CSS preprocessors (e.g. Sass/Less).
--    Ability to configure and optimize build systems (we use Webpack, Rollup).
--    Experience with git.
--    English language proficiency at a B1 level or higher.
-
-Will be a plus:
-
--    Work with React Native.
--    Next.js.
-
-
-
 **Requirements:**
 
 1. Fetch All Users:
@@ -53,17 +21,16 @@ Design the table and search inputs to be user-friendly and visually appealing. T
 is up to you, aiming for a clean and effective user interface
 
 
-Требования:
-1. Получение всех пользователей:
-- Используйте конечную точку GET /users из JSONPlaceholder для получения списка всех пользователей. Документация: JSONPlaceholder
-2. Отображение пользователей в таблице:
-- Реализуйте таблицу со столбцами: имя, имя пользователя, электронная почта и телефон.
-3. Реализуйте расширенную фильтрацию:
-- Добавьте поля ввода для поиска для каждого столбца (имя, имя пользователя, электронная почта, телефон).
-- Убедитесь, что таблица динамически фильтрует результаты на основе данных, введенных пользователем в эти полей, с обновлением в режиме реального времени.
-4. Управление состоянием:
-- Используйте Redux для управления состоянием приложения, включая пользовательские данные и состояния фильтров. состояния. Для этой задачи вы можете выбрать Classic Redux или Redux Toolkit.
-5. Безопасность типов:
-- Применяйте TypeScript во всем веб-приложении, чтобы обеспечить правильной типизации и уменьшения потенциальных ошибок во время выполнения. Это включает в себя все аспекты функциональности приложения.
-6. Дизайн и стилизация:
-- Дизайн таблиц и поисковых входов должен быть удобным для пользователя и визуально привлекательным. Оформление вы можете выбрать сами, стремясь к чистому и эффективному пользовательскому интерфейсу.
+
+**First of all, thanks for the opportunity to participate in this challenge.**
+
+Here's a brief explanation of my approach to the task and some of the problems I encountered:
+- I assumed a certain Redux state structure that includes a list of users, a set of filters, and a couple of flags. This is critical for creating selectors that work with the right parts of the state.
+- I used the createSelector function from the redux-toolkit library to combine these simple selectors. This function allows you to combine multiple selectors into a single, more complex selector that performs a filtering operation. It also memoizes the result.
+- In the combined selector, I implemented filter logic. This logic applies different filters to the list of users, either individually or in combination, ensuring that only users matching all criteria are returned.
+
+Difficulties: In the process of declaring variables in the second parameter of the createSelector function, I mixed up their sequence, which led to a filtering bug, but the bug was found and fixed rather quickly.
+
+I solved the issue of filtering phone numbers using regular expressions.
+
+By addressing these issues, the final solution effectively combines Redux state management with memoized combo selectors to optimize performance and maintain clean and efficient code.
