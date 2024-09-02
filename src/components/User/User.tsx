@@ -17,5 +17,3 @@ export const User = ({ name, username, email, phone }: IUserProps) => {
     </UserItem>
   );
 };
-
-// data-fulltext={name}
