@@ -1,13 +1,13 @@
+import { TUser } from '../../types/TUser';
 import { TextField, UserItem } from './User.styled';
 
-interface IUserProps {
-  name: string;
-  username: string;
-  email: string;
-  phone: string;
-}
+type UserProps = {
+  userData: TUser;
+};
 
-export const User = ({ name, username, email, phone }: IUserProps) => {
+export const User: React.FC<UserProps> = ({ userData }) => {
+  const { id, name, username, email, phone } = userData;
+
   return (
     <UserItem>
       <TextField data-text={name}>{name}</TextField>
@@ -17,5 +17,3 @@ export const User = ({ name, username, email, phone }: IUserProps) => {
     </UserItem>
   );
 };
-
-// data-fulltext={name}

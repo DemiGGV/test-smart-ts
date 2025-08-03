@@ -12,7 +12,6 @@ export const GlobalCSS = css`
     font-size: 16px;
     line-height: 1.6;
     color: var(--gray-color);
-    
   }
 
   h1,
@@ -30,7 +29,6 @@ export const GlobalCSS = css`
     margin: 0;
     padding: 0;
     list-style: none;
-
   }
 
   img {

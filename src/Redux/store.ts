@@ -1,7 +1,7 @@
-import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
 
-import { usersReducer } from "./users/usersSlice";
-import { filtersReducer } from "./filters/filtersSlice";
+import { usersReducer } from './users/usersSlice';
+import { filtersReducer } from './filters/filtersSlice';
 
 const rootReducer = combineReducers({
   users: usersReducer,
@@ -9,7 +9,7 @@ const rootReducer = combineReducers({
 });
 
 export const store = configureStore({
-  reducer: rootReducer
+  reducer: rootReducer,
 });
 
 export type RootState = ReturnType<typeof store.getState>;

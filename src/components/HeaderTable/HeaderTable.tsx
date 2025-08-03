@@ -21,7 +21,7 @@ export const HeaderTable = () => {
   const email = useAppSelector(getEmailFilter);
   const phone = useAppSelector(getPhoneFilter);
 
-  const handleChange = ( e:React.ChangeEvent<HTMLInputElement> ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault;
     const { name, value } = e.target;
     dispatch(setFilter({ [name]: value.trim() }));

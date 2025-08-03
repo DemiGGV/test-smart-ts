@@ -5,7 +5,7 @@ import { fetchUsers } from './Redux/users/usersOperations.js';
 import { MainSection, TitleStyled } from './App.styled.jsx';
 import { useAppDispatch } from './Redux/redux-hooks';
 
-function App() {
+const App: React.FC = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -19,6 +19,6 @@ function App() {
       <UsersList />
     </MainSection>
   );
-}
+};
 
 export default App;

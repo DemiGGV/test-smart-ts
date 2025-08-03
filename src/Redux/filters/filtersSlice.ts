@@ -1,17 +1,26 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-const filtersInitialState = {
-  name: "",
-  username: "",
-  email: "",
-  phone: "",
+export type FiltersState = {
+  name: string;
+  username: string;
+  email: string;
+  phone: string;
+};
+
+type PartialFilters = Partial<FiltersState>;
+
+const filtersInitialState: FiltersState = {
+  name: '',
+  username: '',
+  email: '',
+  phone: '',
 };
 
 const filtersSlice = createSlice({
-  name: "filters",
+  name: 'filters',
   initialState: filtersInitialState,
   reducers: {
-    setFilter: (state, action) => {
+    setFilter: (state, action: PayloadAction<PartialFilters>) => {
       const { name, username, email, phone } = action.payload;
       if (name !== undefined) state.name = name;
       if (username !== undefined) state.username = username;

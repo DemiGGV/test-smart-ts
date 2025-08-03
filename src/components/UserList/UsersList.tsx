@@ -8,14 +8,8 @@ export const UsersList = () => {
   const users = useAppSelector(getFilteredUsers);
   return (
     <UsersListStyled>
-      {users.map(({ id, name, username, phone, email }: TUser) => (
-        <User
-          key={id}
-          name={name}
-          username={username}
-          email={email}
-          phone={phone}
-        />
+      {users.map((user: TUser) => (
+        <User key={user.id} userData={user} />
       ))}
     </UsersListStyled>
   );

@@ -1,13 +1,12 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import { Provider } from "react-redux";
-import { store } from "./Redux/store";
-import { Global  } from "@emotion/react";
-import { GlobalCSS } from "./main.styled";
-import App from "./App";
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux';
+import { store } from './Redux/store';
+import { Global } from '@emotion/react';
+import { GlobalCSS } from './main.styled';
+import App from './App';
 
-
-const rootEntry = document.getElementById("root");
+const rootEntry = document.getElementById('root') as HTMLElement | null;
 
 // root HTML element guard
 if (rootEntry) {
@@ -17,8 +16,8 @@ if (rootEntry) {
         <Global styles={GlobalCSS} />
         <App />
       </Provider>
-    </StrictMode>
+    </StrictMode>,
   );
 } else {
-  console.error("Root element not found");
+  console.error('Root element not found');
 }
